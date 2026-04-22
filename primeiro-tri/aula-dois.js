@@ -48,7 +48,6 @@ console.log(1500 / "2") // 750
 
 // EXEMPLO 
 
-
 console.log(`Soma: ${soma}`)
 console.log(`Subtração: ${sub}`)
 console.log(`Multiplicação: ${mul}`)
