@@ -28,6 +28,7 @@ F F = F             |   F F = F
 
 
 
+//ATIVIDADE
 /* A escola adota uma recuperação para cada avaliação, 
 que substitui a nota do aluno caso seja maior que 
 sua nota anterior.
