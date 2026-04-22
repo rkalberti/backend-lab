@@ -42,3 +42,28 @@ const recup2 = 10.0;
 let nota1;
 let nota2;
 let media;
+
+if (recup1 > av1) {
+    nota1 = recup1;
+} else {
+    nota1 = av1;
+}
+
+
+if (recup2 > av2) {
+    nota2 = recup2;
+} else {
+    nota2 = av2;
+}
+
+// Calcula a média
+media = (nota1 + nota2) / 2;
+
+// Mostra a média
+console.log("Média:", media);
+
+if (media >= 6) {
+    console.log("Aluno aprovado!");
+} else {
+    console.log("Aluno reprovado!");
+}
