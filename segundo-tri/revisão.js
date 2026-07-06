@@ -27,24 +27,14 @@ app.get("/musicas/:id", (req, res) => {
     try {
         const musicas = JSON.parse(fs.readFileSync("bd.json", "utf8"))
         const musica_encontrada = musicas.find((musica) => musica.id == id)
-        if(musica_encontrada) {
-            res.status(200).json(musica_encontrada)
-        } else{
-            res.status(404).json({resposta: "Musica não exixte no banco de dados"})
-        }
-        res.status(200).json(bd)
-    } catch (error) {
-        res.status(500).json({resposta: error.message})
-    }
-})
 
-app.post("/musicas", (req, res) => {
-    const musica = req.body
-    try {
-        const bd = JSON.parse(fs.readFileSync("bd.json", "utf8"))
-        res.status(200).json(bd)
+        if (musica_encontrada) {
+            res.status(200).json(musica_encontrada)
+        } else {
+            res.status(404).json({ resposta: "Música não existe no banco de dados" })
+        }
     } catch (error) {
-        res.status(500).json({erro: error.message})
+        res.status(500).json({ resposta: error.message })
     }
 })
 
