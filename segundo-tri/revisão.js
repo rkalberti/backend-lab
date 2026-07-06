@@ -38,6 +38,25 @@ app.get("/musicas/:id", (req, res) => {
     }
 })
 
+app.post("/musicas", (req, res) => {
+    const musica = req.body
+
+    try {
+        const bd = JSON.parse(fs.readFileSync("bd.json", "utf8"))
+
+        bd.push(musica)
+
+        fs.writeFileSync("bd.json", JSON.stringify(bd), "utf8")
+
+        res.status(201).json({
+            resposta: "Música cadastrada com sucesso!",
+            musica
+        })
+    } catch (error) {
+        res.status(500).json({ erro: error.message })
+    }
+})
+
 
 
 app.delete("/musicas/:id", (req , res)=>{
