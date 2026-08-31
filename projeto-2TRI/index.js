@@ -58,9 +58,9 @@ app.get("/clientes", (req, res) => {
 // CONSULTA DE CLIENTE
 app.get("/clientes/:cpf", (req, res) => {
     const cpfParam = req.params.cpf
-    const cpfLimpo = cpfParam.replace(/[^\d]/g, '') // Remove pontos e traços
+    const cpfLimpo = cpfParam.replace(/[^\d]/g, '') 
 
-    // Remove a formatação do banco na hora de comparar para bater certinho
+    
     const query = "SELECT * FROM cliente WHERE REPLACE(REPLACE(cpf, '.', ''), '-', '') = ?"
 
     db.query(query, [cpfLimpo], (error, results) => {
@@ -70,7 +70,7 @@ app.get("/clientes/:cpf", (req, res) => {
         if (results.length === 0) {
             return res.status(404).json({ resposta: "Cliente não existe no banco de dados!" })
         }
-        res.status(200).json(results[0]) // Retorna apenas o cliente encontrado
+        res.status(200).json(results[0]) 
     })
 })
 
