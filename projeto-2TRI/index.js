@@ -1,5 +1,5 @@
 // npm init ---- npm i express mysql2
-// instalar extensão RapidAPI Client ----  http://localhost:3000/clientes
+// instalar extensão RapidAPI Client ----  http://localhost:3001/rota
 
 const express = require("express")
 const mysql = require("mysql2") // Driver para conectar com o banco da extensão
