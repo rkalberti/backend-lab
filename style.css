@@ -1,0 +1,1570 @@
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #080b2b, #24105c, #3b1b75);
+    color: white;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+    background: rgba(8, 11, 43, 0.95) !important;
+    padding: 10px 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand img {
+    max-height: 70px;
+    width: auto;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #9f8cff !important;
+}
+
+/* ===== ÁREA PRINCIPAL ===== */
+
+main {
+    min-height: calc(100vh - 100px);
+    padding: 50px 20px;
+}
+
+/* ===== FORMULÁRIO ===== */
+
+#form_cadastro {
+    width: 100%;
+    max-width: 850px;
+    padding: 45px 55px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Título */
+
+#form_cadastro h1 {
+    margin-bottom: 35px;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+
+    color: #8ec5ff;
+}
+
+
+/* Labels */
+
+#form_cadastro label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 18px;
+
+    color: #dcd8ff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Campos */
+
+.input_texto {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.input_texto::placeholder {
+    color: #aaa8c5;
+}
+
+.input_texto:focus {
+    border-color: #7b8cff;
+    background: rgba(255, 255, 255, 0.13);
+
+    box-shadow: 0 0 12px rgba(104, 123, 255, 0.35);
+}
+
+/* ===== BOTÃO ===== */
+
+.btn_enviar {
+    width: 100%;
+    height: 50px;
+
+    margin-top: 30px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: linear-gradient(90deg, #398cff, #8b4dff);
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn_enviar:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(98, 92, 255, 0.45);
+
+    background: linear-gradient(90deg, #4c9aff, #9c62ff);
+}
+
+.btn_enviar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 768px) {
+
+    #form_cadastro {
+        padding: 30px 25px;
+        max-width: 500px;
+    }
+
+    #form_cadastro h1 {
+        font-size: 28px;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .navbar {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #form_cadastro {
+        padding: 25px 18px;
+        border-radius: 18px;
+    }
+
+    #form_cadastro h1 {
+        font-size: 25px;
+    }
+
+    .input_texto {
+        height: 45px;
+    }
+}
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #252b63 0%,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #090d25,
+            #151337,
+            #211449
+        );
+
+    color: white;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    background: rgba(5, 8, 25, 0.85) !important;
+
+    min-height: 80px;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    color: white !important;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #8ec5ff !important;
+}
+
+
+/* =====================================================
+   ÁREA PRINCIPAL
+===================================================== */
+
+main {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* =====================================================
+   CARD PRINCIPAL
+===================================================== */
+
+.cadastro-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 1000px;
+
+    min-height: 570px;
+
+    display: flex;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =====================================================
+   LADO ESQUERDO
+===================================================== */
+
+.cadastro-esquerda {
+    position: relative;
+
+    width: 48%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #a8e7ff 0%,
+            #8ec5ff 30%,
+            #625de5 65%,
+            #29245f 100%
+        );
+}
+
+
+/* =====================================================
+   CURVA DO LADO ESQUERDO
+===================================================== */
+
+.cadastro-esquerda::after {
+    content: "";
+
+    position: absolute;
+
+    top: -10%;
+
+    right: -95px;
+
+    width: 190px;
+    height: 120%;
+
+    background: #171445;
+
+    border-radius: 50%;
+
+    z-index: 5;
+}
+
+
+/* =====================================================
+   ILUSTRAÇÃO
+===================================================== */
+
+.ilustracao {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+}
+
+
+/* Lua */
+
+.lua {
+    position: absolute;
+
+    width: 115px;
+    height: 115px;
+
+    top: 55px;
+    left: 75px;
+
+    border-radius: 50%;
+
+    background: #e5f9ff;
+
+    opacity: 0.9;
+
+    box-shadow:
+        0 0 40px rgba(255,255,255,0.4);
+}
+
+
+/* =====================================================
+   MONTANHAS
+===================================================== */
+
+.montanha {
+    position: absolute;
+
+    bottom: 100px;
+
+    width: 0;
+    height: 0;
+
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+
+    border-bottom: 250px solid;
+}
+
+.montanha1 {
+    left: -100px;
+
+    border-bottom-color: #438fd3;
+}
+
+.montanha2 {
+    left: 90px;
+    bottom: 90px;
+
+    border-left-width: 180px;
+    border-right-width: 180px;
+
+    border-bottom-color: #5369d9;
+}
+
+.montanha3 {
+    right: -140px;
+    bottom: 80px;
+
+    border-left-width: 200px;
+    border-right-width: 200px;
+
+    border-bottom-color: #383a9b;
+}
+
+
+/* =====================================================
+   ÁRVORES
+===================================================== */
+
+.arvore {
+    position: absolute;
+
+    color: #17275f;
+
+    font-size: 75px;
+
+    line-height: 1;
+
+    z-index: 3;
+}
+
+.arvore1 {
+    bottom: 120px;
+    left: 30px;
+}
+
+.arvore2 {
+    bottom: 155px;
+    left: 115px;
+
+    font-size: 50px;
+}
+
+.arvore3 {
+    bottom: 125px;
+    left: 220px;
+
+    font-size: 65px;
+}
+
+.arvore4 {
+    bottom: 165px;
+    right: 50px;
+
+    font-size: 45px;
+}
+
+
+/* =====================================================
+   CASINHAS
+===================================================== */
+
+.casinha {
+    position: absolute;
+
+    z-index: 4;
+}
+
+.casa1 {
+    left: 150px;
+    top: 245px;
+}
+
+.casa2 {
+    right: 100px;
+    bottom: 205px;
+}
+
+.telhado {
+    width: 0;
+    height: 0;
+
+    border-left: 28px solid transparent;
+    border-right: 28px solid transparent;
+
+    border-bottom: 25px solid #7d4cff;
+}
+
+.casa-corpo {
+    width: 42px;
+    height: 35px;
+
+    background: #eefaff;
+
+    border-radius: 2px;
+
+    box-shadow:
+        inset 0 -5px 0 #d2e8ff;
+}
+
+
+/* =====================================================
+   WELCOME
+===================================================== */
+
+.texto-welcome {
+    position: absolute;
+
+    top: 125px;
+    left: 50px;
+
+    z-index: 6;
+}
+
+.texto-welcome span {
+    color: #ffffff;
+
+    font-size: 18px;
+
+    letter-spacing: 8px;
+
+    font-weight: 500;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,0.15);
+}
+
+
+/* =====================================================
+   LADO DIREITO
+===================================================== */
+
+.cadastro-direita {
+    width: 52%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171445,
+            #292064 50%,
+            #342477
+        );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+
+/* =====================================================
+   CONTEÚDO
+===================================================== */
+
+.conteudo-form {
+    width: 100%;
+    max-width: 480px;
+}
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.conteudo-form h1 {
+    font-size: 25px;
+
+    color: white;
+
+    margin-bottom: 5px;
+
+    font-weight: 600;
+}
+
+.subtitulo {
+    color: #c9c5ed;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   REDES SOCIAIS
+===================================================== */
+
+.social {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.social button {
+    width: 42px;
+    height: 32px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.social button:hover {
+    background: rgba(255,255,255,0.12);
+
+    border-color: #8ec5ff;
+}
+
+
+/* =====================================================
+   SEPARADOR
+===================================================== */
+
+.separador {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 10px 0 12px;
+
+    color: #aaa6cf;
+
+    font-size: 12px;
+}
+
+.separador::before,
+.separador::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: rgba(255,255,255,0.3);
+}
+
+
+/* =====================================================
+   LINHAS DO FORMULÁRIO
+===================================================== */
+
+.linha {
+    display: flex;
+
+    gap: 14px;
+
+    width: 100%;
+}
+
+.campo {
+    flex: 1;
+
+    margin-bottom: 10px;
+}
+
+.campo label {
+    display: block;
+
+    color: #d8d5ef;
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.campo input:not([type="checkbox"]) {
+    width: 100%;
+
+    height: 38px;
+
+    padding: 0 14px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    outline: none;
+
+    background: rgba(255,255,255,0.04);
+
+    color: white;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.campo input::placeholder {
+    color: #8f8bb2;
+}
+
+.campo input:focus {
+    border-color: #76c8ff;
+
+    background: rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 0 10px rgba(84, 169, 255, 0.2);
+}
+
+
+/* =====================================================
+   SENHA
+===================================================== */
+
+.campo-senha {
+    width: 100%;
+}
+
+
+/* =====================================================
+   TERMOS
+===================================================== */
+
+.termos {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 5px;
+
+    color: #aaa6c7;
+
+    font-size: 10px;
+}
+
+.termos input {
+    width: 17px;
+    height: 17px;
+
+    accent-color: #7459ff;
+
+    cursor: pointer;
+}
+
+.termos label {
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   BOTÃO
+===================================================== */
+
+.btn_enviar {
+    display: block;
+
+    width: 125px;
+
+    height: 40px;
+
+    margin-top: 22px;
+
+    border: none;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4da9ff,
+            #8b5cf6
+        );
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn_enviar:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(100, 90, 255, 0.35);
+}
+
+.btn_enviar:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .cadastro-card {
+        max-width: 520px;
+
+        flex-direction: column;
+    }
+
+    .cadastro-esquerda {
+        width: 100%;
+
+        height: 200px;
+    }
+
+    .cadastro-esquerda::after {
+        display: none;
+    }
+
+    .cadastro-direita {
+        width: 100%;
+
+        padding: 35px 25px;
+    }
+
+    .texto-welcome {
+        top: 70px;
+        left: 40px;
+    }
+
+    .lua {
+        top: 30px;
+        left: 40px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .linha {
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+    .cadastro-card {
+        border-radius: 20px;
+    }
+
+    .cadastro-direita {
+        padding: 30px 20px;
+    }
+
+    .btn_enviar {
+        width: 100%;
+    }
+}
+/* =====================================================
+   LOGIN
+===================================================== */
+
+.login-card {
+    min-height: 520px;
+}
+
+
+/* =====================================================
+   LADO ESQUERDO DO LOGIN
+===================================================== */
+
+.login-esquerda {
+    background:
+        linear-gradient(
+            180deg,
+            #7bd4ff 0%,
+            #3f91d8 35%,
+            #34308b 70%,
+            #17143f 100%
+        );
+}
+
+
+/* =====================================================
+   ILUSTRAÇÃO DO LOGIN
+===================================================== */
+
+.login-ilustracao {
+    background:
+        radial-gradient(
+            circle at 70% 25%,
+            rgba(255,255,255,0.18),
+            transparent 30%
+        );
+}
+
+
+/* =====================================================
+   PICO DAS MONTANHAS
+===================================================== */
+
+.pico {
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+
+    border-bottom: 100px solid rgba(240, 250, 255, 0.85);
+
+    z-index: 3;
+}
+
+
+/* Pico 1 */
+
+.pico1 {
+    left: 70px;
+    bottom: 315px;
+}
+
+
+/* Pico 2 */
+
+.pico2 {
+    left: 245px;
+    bottom: 275px;
+
+    transform: scale(0.75);
+}
+
+
+/* =====================================================
+   CORREÇÃO DAS MONTANHAS
+===================================================== */
+
+.login-esquerda .montanha1 {
+    border-bottom-color: #3477b5;
+}
+
+.login-esquerda .montanha2 {
+    border-bottom-color: #3d57ad;
+}
+
+.login-esquerda .montanha3 {
+    border-bottom-color: #27296e;
+}
+
+
+/* =====================================================
+   ÁRVORES
+===================================================== */
+
+.login-esquerda .arvore {
+    color: #101d4d;
+
+    text-shadow:
+        0 4px 4px rgba(0,0,0,0.15);
+}
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.login-esquerda .texto-welcome {
+    top: 100px;
+    left: 45px;
+}
+
+.login-esquerda .texto-welcome span {
+    font-size: 20px;
+
+    letter-spacing: 9px;
+
+    font-weight: bold;
+
+    color: white;
+}
+
+
+/* =====================================================
+   LUA
+===================================================== */
+
+.login-esquerda .lua {
+    width: 90px;
+    height: 90px;
+
+    top: 50px;
+    right: 90px;
+
+    background: #edfaff;
+
+    box-shadow:
+        0 0 30px rgba(255,255,255,0.5);
+}
+
+
+/* =====================================================
+   LOGIN - LADO DIREITO
+===================================================== */
+
+.login-direita {
+    background:
+        linear-gradient(
+            135deg,
+            #171445,
+            #25205d,
+            #36247b
+        );
+}
+
+
+/* =====================================================
+   CAMPOS DO LOGIN
+===================================================== */
+
+.login-direita .campo {
+    margin-bottom: 18px;
+}
+
+.login-direita .campo label {
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   LEMBRAR / ESQUECI SENHA
+===================================================== */
+
+.lembrar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    color: #aaa6c7;
+}
+
+.lembrar label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+}
+
+.lembrar input {
+    width: 15px;
+    height: 15px;
+
+    accent-color: #765cff;
+}
+
+.lembrar a {
+    color: #8ec5ff;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.lembrar a:hover {
+    color: #b18cff;
+}
+
+
+/* =====================================================
+   BOTÃO LOGIN
+===================================================== */
+
+.login-direita .btn_enviar {
+    width: 100%;
+
+    height: 43px;
+
+    margin-top: 25px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #399cff,
+            #814dff
+        );
+
+    font-size: 13px;
+}
+
+.login-direita .btn_enviar:hover {
+    background:
+        linear-gradient(
+            90deg,
+            #4daaff,
+            #9565ff
+        );
+
+    box-shadow:
+        0 8px 25px rgba(83, 108, 255, 0.35);
+}
+
+
+/* =====================================================
+   LINK DE CADASTRO
+===================================================== */
+
+.cadastro-link {
+    text-align: center;
+
+    margin-top: 22px;
+
+    color: #aaa6c7;
+
+    font-size: 11px;
+}
+
+.cadastro-link a {
+    color: #8ec5ff;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.cadastro-link a:hover {
+    color: #b28cff;
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .login-card {
+        min-height: auto;
+    }
+
+    .login-esquerda {
+        height: 220px;
+    }
+
+    .login-esquerda .texto-welcome {
+        top: 80px;
+    }
+
+    .login-esquerda .lua {
+        top: 35px;
+        right: 50px;
+    }
+
+    .login-esquerda .pico1 {
+        bottom: 100px;
+    }
+
+    .login-esquerda .pico2 {
+        bottom: 80px;
+    }
+}
+
+/* =====================================================
+   PÁGINA DE PRODUTOS
+===================================================== */
+
+.pagina-produtos {
+    min-height: calc(100vh - 80px);
+    padding: 65px 25px;
+    display: block;
+}
+
+.produtos-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =====================================================
+   CABEÇALHO DOS PRODUTOS
+===================================================== */
+
+.produtos-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.produtos-tag {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #8ec5ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.produtos-header h1 {
+    color: #ffffff;
+    font-size: clamp(28px, 4vw, 43px);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.produtos-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #c9c5ed;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   CAMPO DE PESQUISA
+===================================================== */
+
+.pesquisa-produtos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    max-width: 650px;
+    height: 55px;
+
+    margin: 0 auto 30px;
+    padding: 0 20px;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 30px;
+
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.pesquisa-produtos:focus-within {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 18px rgba(120, 85, 237, 0.25);
+}
+
+.icone-pesquisa {
+    color: #8ec5ff;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.pesquisa-produtos input {
+    flex: 1;
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: white;
+
+    font-size: 14px;
+}
+
+.pesquisa-produtos input::placeholder {
+    color: #aaa6c7;
+}
+
+/* =====================================================
+   FILTROS
+===================================================== */
+
+.filtros-produtos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-bottom: 40px;
+}
+
+.filtro {
+    padding: 10px 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.04);
+    color: #d8d5ef;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtro:hover,
+.filtro.ativo {
+    border-color: transparent;
+    background: linear-gradient(90deg, #398cff, #8b4dff);
+    color: white;
+
+    box-shadow: 0 5px 18px rgba(98, 92, 255, 0.2);
+}
+
+/* =====================================================
+   GRADE DE PRODUTOS
+===================================================== */
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* =====================================================
+   CARD DO PRODUTO
+===================================================== */
+
+.produto-card {
+    min-width: 0;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 22px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(36, 32, 82, 0.95),
+        rgba(18, 16, 52, 0.98)
+    );
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22);
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+.produto-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(142, 197, 255, 0.5);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* =====================================================
+   IMAGEM
+===================================================== */
+
+.produto-imagem {
+    position: relative;
+
+    height: 260px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(106, 96, 210, 0.25),
+            transparent 65%
+        ),
+        #171445;
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+
+    object-fit: contain;
+    transition: transform 0.4s;
+}
+
+.produto-card:hover .produto-imagem img {
+    transform: scale(1.06);
+}
+
+/* =====================================================
+   ETIQUETA
+===================================================== */
+
+.produto-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+
+    padding: 7px 12px;
+    border-radius: 20px;
+
+    background: linear-gradient(90deg, #398cff, #8b4dff);
+    color: white;
+
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* =====================================================
+   INFORMAÇÕES
+===================================================== */
+
+.produto-info {
+    padding: 22px;
+}
+
+.produto-categoria {
+    color: #8ec5ff;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.produto-info h2 {
+    margin: 10px 0;
+    color: white;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.produto-descricao {
+    min-height: 38px;
+    margin-bottom: 20px;
+
+    color: #aaa6c7;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =====================================================
+   PREÇO E BOTÃO
+===================================================== */
+
+.produto-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.produto-preco {
+    color: #8ec5ff;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.btn-produto {
+    padding: 10px 17px;
+
+    border: none;
+    border-radius: 22px;
+
+    background: linear-gradient(90deg, #398cff, #8b4dff);
+    color: white;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-produto:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(98, 92, 255, 0.35);
+}
+
+/* =====================================================
+   NENHUM PRODUTO
+===================================================== */
+
+.sem-produtos {
+    padding: 50px 20px;
+    text-align: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.sem-produtos h2 {
+    color: #8ec5ff;
+    font-size: 22px;
+}
+
+.sem-produtos p {
+    margin-top: 10px;
+    color: #c9c5ed;
+    font-size: 14px;
+}
+
+.sem-produtos[hidden] {
+    display: none !important;
+}
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 900px) {
+    .lista-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .pagina-produtos {
+        padding: 45px 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .pagina-produtos {
+        padding: 35px 15px;
+    }
+
+    .produtos-header h1 {
+        font-size: 28px;
+    }
+
+    .produtos-header p {
+        font-size: 13px;
+    }
+
+    .filtros-produtos {
+        gap: 8px;
+        margin-bottom: 28px;
+    }
+
+    .filtro {
+        padding: 9px 16px;
+    }
+
+    .lista-produtos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .produto-imagem {
+        height: 280px;
+    }
+
+    .produto-info {
+        padding: 20px;
+    }
+}

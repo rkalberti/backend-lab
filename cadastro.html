@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+
+    <link href="style.css" rel="stylesheet">
+
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <div class="container-fluid justify-content-center">
+
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" height="100" alt="">
+                </a>
+
+                <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse flex-grow-0 justify-content-center"
+                    id="navbarNav">
+
+                    <ul class="navbar-nav text-center">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                PRODUTOS
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="carrinho.html">
+                                CARRINHO
+                            </a>
+                        </li>
+
+                        <li class="nav-item active" id="nav-login">
+                            <a class="nav-link" href="login.html">
+                                LOGIN
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <div class="dropdown m-3">
+
+                        <button id="user-info"
+                            class="btn btn-light dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            style="display: none">
+
+                            Opções
+
+                        </button>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="cadastro.html">
+                                    Perfil
+                                </a>
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="logout()">
+                                    Sair
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <div class="cadastro-card">
+
+            <!-- LADO ESQUERDO -->
+            <div class="cadastro-esquerda">
+
+                <div class="ilustracao">
+
+                    <div class="lua"></div>
+
+                    <div class="montanha montanha1"></div>
+                    <div class="montanha montanha2"></div>
+                    <div class="montanha montanha3"></div>
+
+                    <div class="arvore arvore1">▲</div>
+                    <div class="arvore arvore2">▲</div>
+                    <div class="arvore arvore3">▲</div>
+                    <div class="arvore arvore4">▲</div>
+
+                    <div class="casinha casa1">
+                        <div class="telhado"></div>
+                        <div class="casa-corpo"></div>
+                    </div>
+
+                    <div class="casinha casa2">
+                        <div class="telhado"></div>
+                        <div class="casa-corpo"></div>
+                    </div>
+
+                    <div class="texto-welcome">
+                        <span>W E L C O M E</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LADO DIREITO -->
+            <div class="cadastro-direita">
+
+                <div class="conteudo-form">
+
+                    <h1>Olá!</h1>
+
+                    <p class="subtitulo">
+                        Cadastre-se para continuar :)
+                    </p>
+
+
+                    <!-- FORMULÁRIO -->
+                    <form id="form_cadastro">
+
+                        <div class="linha">
+
+                            <div class="campo">
+
+                                <label for="nome">
+                                    Nome
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nome"
+                                    placeholder="Seu nome"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="campo">
+
+                                <label for="cpf">
+                                    CPF
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="cpf"
+                                    placeholder="000.000.000-00"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="linha">
+
+                            <div class="campo">
+
+                                <label for="celular">
+                                    Celular
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="celular"
+                                    placeholder="(42) 99999-9999"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="campo">
+
+                                <label for="email">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="email@email.com"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="campo campo-senha">
+
+                            <label for="senha">
+                                Senha
+                            </label>
+
+                            <input
+                                type="password"
+                                id="senha"
+                                placeholder="Digite sua senha"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="termos">
+
+                            <input
+                                type="checkbox"
+                                id="termos"
+                                required
+                            >
+
+                            <label for="termos">
+                                Aceito os Termos de Serviço e
+                                Política de Privacidade
+                            </label>
+
+                        </div>
+
+
+                        <input
+                            type="submit"
+                            id="btn_enviar"
+                            value="Cadastrar"
+                            class="btn_enviar"
+                        >
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ALERTA TOAST ADICIONADO -->
+        <div class="position-fixed"
+            style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050;">
+
+            <div id="liveToast"
+                class="toast align-items-center text-white bg-success border-0"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
+                data-bs-delay="5000">
+
+                <div class="d-flex">
+
+                    <div class="toast-body" id="toast-message">
+                        Mensagem
+                    </div>
+
+                    <button type="button"
+                        class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast"
+                        aria-label="Fechar">
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- FIM ALERTA TOAST -->
+
+    </main>
+
+
+    <footer>
+    </footer>
+
+
+    <script>
+
+        function pegar_dados() {
+
+            const dados = {
+
+                nome: document.getElementById("nome").value,
+
+                cpf: document.getElementById("cpf").value,
+
+                celular: document.getElementById("celular").value,
+
+                email: document.getElementById("email").value,
+
+                senha: document.getElementById("senha").value
+
+            }
+
+            return dados
+        }
+
+
+        const form = document.getElementById("form_cadastro")
+
+        const btn_enviar = document.getElementById("btn_enviar")
+
+
+        form.addEventListener("submit", async (event) => {
+
+            // Impede o recarregamento da página
+            event.preventDefault()
+
+
+            // Desabilita o botão
+            btn_enviar.disabled = true
+
+            btn_enviar.value = "Enviando cadastro..."
+
+
+            // Pega os dados do formulário
+            const dados = pegar_dados()
+
+
+            try {
+
+                const resposta = await fetch(
+                    "http://localhost:3000/cliente",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify(dados)
+                    }
+                )
+
+
+                if (!resposta.ok) {
+
+                    throw new Error("Erro na API")
+
+                }
+
+
+                mostrarToast(
+                    "✅ Cadastro enviado com sucesso!",
+                    "bg-success"
+                )
+
+
+                // Limpa o formulário
+                form.reset()
+
+
+            } catch (error) {
+
+                mostrarToast(
+                    "❌ Falha ao enviar. " + error,
+                    "bg-danger"
+                )
+
+
+            } finally {
+
+                // Habilita o botão novamente
+                btn_enviar.disabled = false
+
+                btn_enviar.value = "Cadastrar"
+
+            }
+
+        })
+
+    </script>
+
+
+    <!-- SCRIPT DO PROFESSOR -->
+    <script src="pages.js"></script>
+
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Yvpcr1tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
