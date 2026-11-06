@@ -1,159 +1,466 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>Aventura Extreme | Loja de Equipamentos</title>
+
+    <!-- BOOTSTRAP -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS DO PROJETO -->
     <link href="style.css" rel="stylesheet">
-    <title>Login</title>
-  
+
 </head>
+
 <body>
+
+    <!-- =================================
+         CABEÇALHO / MENU
+    ================================== -->
+
     <header>
-        <!-- <img src="logo.png" alt="Logo do e-commerce> -->
+
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid justify-content-center">
-                <a class="navbar-brand" href="#">
-                    <img src="logo.png" height="100" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse flex-grow-0 justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav text-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">PRODUTOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="carrinho.html">CARRINHO</span></a>
-                        </li>
-                        <li class="nav-item active" id="nav-login">
-                            <a class="nav-link" href="login.html">LOGIN</a>
-                        </li>
-                    </ul>
-                    <div class="dropdown m-3">
-                        <button id="user-info" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: none">
-                            Opções
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="cadastro.html">Perfil</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#" onclick="logout()">Sair</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-<main class="pagina-produtos">
 
-    <section class="produtos-container">
+            <div class="container-fluid">
 
-        <div class="produtos-header">
-            <span class="produtos-tag">NOSSA COLEÇÃO</span>
-
-            <h1>Encontre seu próximo estilo.</h1>
-
-            <p>
-                Confira nossos produtos e descubra novidades
-                selecionadas especialmente para você.
-            </p>
-        </div>
-
-        <div class="pesquisa-produtos">
-            <span class="icone-pesquisa">⌕</span>
-
-            <input
-                type="text"
-                id="pesquisa-produto"
-                placeholder="Buscar produtos..."
-                aria-label="Buscar produtos"
-            >
-        </div>
-
-        <div class="filtros-produtos">
-            <button class="filtro ativo" type="button">
-                Todos
-            </button>
-
-            <button class="filtro" type="button">
-                Novidades
-            </button>
-
-            <button class="filtro" type="button">
-                Ofertas
-            </button>
-        </div>
-
-        <section class="lista-produtos" id="lista-produtos">
-
-            <article class="produto-card">
-
-                <div class="produto-imagem">
-                    <span class="produto-badge">DESTAQUE</span>
+                <!-- LOGO -->
+                <a class="navbar-brand" href="index.html">
 
                     <img
-                        src="imagens/produto1.png"
-                        alt="Produto 1"
+                        src="logo.png"
+                        height="75"
+                        alt="Aventura Extreme"
                     >
-                </div>
 
-                <div class="produto-info">
-                    <span class="produto-categoria">
-                        MULTIMARCAS
-                    </span>
+                </a>
 
-                    <h2>Produto 01</h2>
+                <!-- BOTÃO MOBILE -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Abrir menu"
+                >
 
-                    <p class="produto-descricao">
-                        Descrição do produto.
-                    </p>
+                    <span class="navbar-toggler-icon"></span>
 
-                    <div class="produto-rodape">
-                        <span class="produto-preco">
-                            R$ 199,90
-                        </span>
+                </button>
+
+                <!-- MENU -->
+                <div
+                    class="collapse navbar-collapse justify-content-end"
+                    id="navbarNav"
+                >
+
+                    <ul class="navbar-nav text-center">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">
+                                PRODUTOS
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="carrinho.html">
+                                CARRINHO
+                            </a>
+                        </li>
+
+                        <li class="nav-item" id="nav-login">
+                            <a class="nav-link" href="login.html">
+                                LOGIN
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <!-- MENU DO USUÁRIO -->
+                    <div class="dropdown m-3">
 
                         <button
-                            class="btn-produto"
+                            id="user-info"
+                            class="btn btn-light dropdown-toggle"
                             type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            style="display: none;"
                         >
-                            Ver produto
+
+                            Opções
+
                         </button>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="cadastro.html"
+                                >
+                                    Perfil
+                                </a>
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="logout()"
+                                >
+                                    Sair
+                                </a>
+                            </li>
+
+                        </ul>
+
                     </div>
+
                 </div>
 
-            </article>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main class="pagina-produtos">
+
+        <section class="hero-loja">
+
+            <div class="hero-conteudo">
+
+                <span class="hero-tag">
+                    AVENTURA EXTREME • EQUIPAMENTOS
+                </span>
+
+                <h1>
+
+                    Sua próxima aventura
+
+                    <span>
+                        começa aqui.
+                    </span>
+
+                </h1>
+
+                <p>
+
+                    Encontre equipamentos de qualidade para explorar,
+                    escalar, surfar e superar seus limites.
+
+                </p>
+
+                <a href="#catalogo" class="hero-btn">
+
+                    EXPLORAR PRODUTOS ↓
+
+                </a>
+
+            </div>
+
+            <div class="hero-imagem">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=1000"
+                    alt="Aventura nas montanhas"
+                >
+
+            </div>
+
+            <div class="hero-decoracao">
+                EXPLORE
+            </div>
+
+        </section>
+
+        <section class="catalogo" id="catalogo">
+
+
+            <!-- TÍTULO -->
+
+            <div class="catalogo-titulo">
+
+                <div>
+
+                    <span class="produtos-tag">
+                        NOSSO CATÁLOGO
+                    </span>
+
+                    <h2>
+                        Equipamentos para explorar
+                    </h2>
+
+                    <p>
+                        Tudo o que você precisa para sua próxima aventura.
+                    </p>
+
+                </div>
+
+                <div class="catalogo-destaque">
+
+                    ✦ AVENTURE-SE SEM LIMITES
+
+                </div>
+
+            </div>
+
+            <div class="barra-pesquisa">
+
+                <span>
+                    ⌕
+                </span>
+
+                <input
+                    type="text"
+                    id="input-busca"
+                    placeholder="O que você está procurando?"
+                    aria-label="Buscar produtos"
+                >
+
+            </div>
+
+            <div class="painel-filtros">
+
+
+                <!-- CATEGORIA -->
+
+                <div class="filtro-campo">
+
+                    <label for="filtro-categoria">
+                        CATEGORIA
+                    </label>
+
+                    <select id="filtro-categoria">
+
+                        <option value="">
+                            Todas as categorias
+                        </option>
+
+                        <option value="trekking">
+                            Trekking
+                        </option>
+
+                        <option value="escalada">
+                            Escalada
+                        </option>
+
+                        <option value="surfe">
+                            Surfe
+                        </option>
+
+                        <option value="camping">
+                            Camping
+                        </option>
+
+                        <option value="acessorios">
+                            Acessórios
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filtro-campo">
+
+                    <label for="preco-min">
+                        PREÇO MÍNIMO
+                    </label>
+
+                    <input
+                        type="number"
+                        id="preco-min"
+                        placeholder="R$ 0,00"
+                        min="0"
+                    >
+
+                </div>
+
+                <div class="filtro-campo">
+
+                    <label for="preco-max">
+                        PREÇO MÁXIMO
+                    </label>
+
+                    <input
+                        type="number"
+                        id="preco-max"
+                        placeholder="R$ 9999,00"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <div class="filtro-campo">
+
+                    <label for="select-ordem">
+                        ORDENAR POR
+                    </label>
+
+                    <select id="select-ordem">
+
+                        <option value="">
+                            Padrão
+                        </option>
+
+                        <option value="menor-preco">
+                            Menor preço
+                        </option>
+
+                        <option value="maior-preco">
+                            Maior preço
+                        </option>
+
+                        <option value="nome">
+                            Nome
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <button
+                    type="button"
+                    id="limpar-filtros"
+                >
+
+                    LIMPAR FILTROS
+
+                </button>
+
+            </div>
+
+
+            <div class="resultado-catalogo">
+
+                <span id="contador-produtos">
+
+                    Carregando produtos...
+
+                </span>
+
+                <span>
+
+                    PRODUTOS SELECIONADOS PARA VOCÊ
+
+                </span>
+
+            </div>
+
+            <div
+                id="produtos"
+                class="grid-produtos"
+            >
+
+                <!--
+                    OS PRODUTOS SERÃO INSERIDOS
+                    AUTOMATICAMENTE PELO JAVASCRIPT
+                -->
+
+            </div>
+
+            <div
+                id="paginacao"
+                class="paginacao"
+            >
+
+            </div>
 
 
         </section>
 
-        <div id="sem-produtos" class="sem-produtos" hidden>
-            <h2>Nenhum produto encontrado</h2>
-            <p>Tente pesquisar por outro nome.</p>
-        </div>
+    </main>
 
-    </section>
 
-</main>
+    <div
+        class="position-fixed"
+        style="
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1050;
+        "
+    >
 
-Copiado
-    <!-- ALERTA TOAST -->
-    <div class="position-fixed" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050;">
-        <div id="liveToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+        <div
+            id="liveToast"
+            class="toast align-items-center text-white bg-success border-0"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+            data-bs-delay="5000"
+        >
+
             <div class="d-flex">
-                <div class="toast-body" id="toast-message">
-                    Mensagem
-                </div>
-            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Fechar"></button>
-        </div>
-    </div>
-    <!-- FIM ALERTA TOAST -->
-    <footer> </footer>
 
+                <div
+                    class="toast-body"
+                    id="toast-message"
+                >
+
+                    Mensagem
+
+                </div>
+
+                <button
+                    type="button"
+                    class="btn-close btn-close-white me-2 m-auto"
+                    data-bs-dismiss="toast"
+                    aria-label="Fechar"
+                >
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer class="text-center py-4">
+
+        <p class="mb-0">
+            © 2026 Aventura Extreme.
+            Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- FUNÇÕES DE LOGIN, USUÁRIO E PÁGINAS -->
     <script src="./pages.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- CONEXÃO COM A API -->
+    <script src="./api.js"></script>
+
+    <!-- FUNCIONALIDADES DOS PRODUTOS -->
+    <script src="./index.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
 
 </body>
+
 </html>
